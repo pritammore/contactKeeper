@@ -18,7 +18,7 @@ app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/contacts', contactRoute);
 
-if(process.env.NODE_ENV === 'prodcution') {
+if(process.env.NODE_ENV === 'production') {
 
     app.use(express.static('client/build'));
 
