@@ -13,7 +13,7 @@ const User = require('../models/Users');
  */
 router.get('/', authMiddleware, async (req, res) => {
     try {
-        const user = await User.findById(req.user.id).select('-password, -__v');
+        const user = await User.findById(req.user.id).select('-password');
         return res.json(user);
     } catch (error) {
         console.error(error.message);
